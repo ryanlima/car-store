@@ -8,11 +8,7 @@ const theme = createMuiTheme({
       main: "#283592",
     },
     secondary: {
-      main: "#E41B84",
-    },
-    tertiary: {
-      backgroundColor: "#d64242",
-      color: "#fff",
+      main: "#d64242",
     },
     error: {
       main: red.A400,
@@ -29,11 +25,11 @@ const theme = createMuiTheme({
     //     backgroundColor: '#fff', // 5d737e
     //   },
     // },
-    // MuiButton: {
-    //   root: {
-    //     fontWeight: "500",
-    //   },
-    // },
+    MuiButton: {
+      root: {
+        margin: 5,
+      },
+    },
   },
 });
 export default theme;
