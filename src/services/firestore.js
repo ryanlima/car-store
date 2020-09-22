@@ -1,6 +1,5 @@
-import * as firebase from "firebase";
-
-const settings = { timestampsInSnapshots: true };
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 var firebaseConfig = {
   apiKey: "AIzaSyCfo84ei_WwIGTWkX5VH4Le8KfEQZ2qunQ",
@@ -14,6 +13,20 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-firebase.firestore().settings(settings);
+const db = firebase.firestore();
 
-export default firebase;
+export const createOffer = async (offer) => {
+  return await db
+    .collection("offers")
+    .add(offer)
+    .then((docRef) => {
+      return true;
+    })
+    .catch((error) => {
+      console.log("Error adding document: ", error);
+    });
+};
+
+export const getOffers = async () => {
+  return await db.collection("offers").get();
+};
