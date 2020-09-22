@@ -1,6 +1,6 @@
 import { red } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
-// A custom theme for this app
+
 const theme = createMuiTheme({
   palette: {
     type: "light",
@@ -10,8 +10,9 @@ const theme = createMuiTheme({
     secondary: {
       main: "#E41B84",
     },
-    neutral: {
-      main: "#5c6ac4",
+    tertiary: {
+      backgroundColor: "#d64242",
+      color: "#fff",
     },
     error: {
       main: red.A400,
@@ -30,7 +31,7 @@ const theme = createMuiTheme({
     // },
     // MuiButton: {
     //   root: {
-    //     margin: '5px',
+    //     fontWeight: "500",
     //   },
     // },
   },
