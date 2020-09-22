@@ -1,39 +1,38 @@
-import { red } from '@material-ui/core/colors';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { red } from "@material-ui/core/colors";
+import { createMuiTheme } from "@material-ui/core/styles";
 // A custom theme for this app
 const theme = createMuiTheme({
   palette: {
-    type: 'light',
+    type: "light",
     primary: {
-      main: '#61dafb',
-      light: '#61dafb',
-      dark: '#21a1c4',
+      main: "#283592",
     },
     secondary: {
-      main: '#b5ecfb',
-      light: '#61dafb',
-      dark: '#21a1c4',
+      main: "#E41B84",
+    },
+    neutral: {
+      main: "#5c6ac4",
     },
     error: {
       main: red.A400,
     },
     background: {
-      default: '#282c34',
+      default: "#F3F3F3",
     },
   },
   overrides: {
-    MuiPaper: {
-      root: {
-        padding: '20px 10px',
-        margin: '10px',
-        backgroundColor: '#fff', // 5d737e
-      },
-    },
-    MuiButton: {
-      root: {
-        margin: '5px',
-      },
-    },
+    // MuiPaper: {
+    //   root: {
+    //     padding: '20px 10px',
+    //     margin: '10px',
+    //     backgroundColor: '#fff', // 5d737e
+    //   },
+    // },
+    // MuiButton: {
+    //   root: {
+    //     margin: '5px',
+    //   },
+    // },
   },
 });
 export default theme;
